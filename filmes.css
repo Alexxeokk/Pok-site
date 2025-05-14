@@ -1,0 +1,250 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color:  #2c2c2c;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Header */
+header {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    padding: 20px 40px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Fundo animado */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png') no-repeat center center / cover;
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+/* LOGO */
+.logo-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: logoBounce 1s ease;
+    /* ADIÇÃO */
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff4f4;
+    font-family: 'Press Start 2P', cursive;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* TEXTO DA LOGO */
+.logo-text {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: logoFadeIn 1s ease-out;
+    /* ADIÇÃO */
+}
+
+.logo-link:hover .logo-text {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* NAVBAR */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Hover com rotação e zoom */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.navbar a:active {
+    color: #ff6f61;
+}
+
+/* RESPONSIVO HEADER */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+}
+  .movies-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .movies-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+  }
+  
+  .movies-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .movie-card {
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 25px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  /* Animação ao passar o mouse */
+  .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Imagem com leve zoom ao passar o mouse */
+  .movie-card:hover img {
+    transform: scale(1.03);
+  }
+  
+  .movie-card h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #fffb00;
+  }
+  
+  .movie-card p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 10px 0;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #FF0000;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 1024px) {
+    .movies-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movies-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  footer {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil */
+}
+  

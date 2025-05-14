@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curiosidades Pokémon</title>
+    <link rel="icon" href="/pokelogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="curiosidades.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <a href="/home.html" class="logo-link">
+                    <img src="/pokemaster.png" alt="Pokémon Logo" class="logo" />
+                    <span class="logo-text">PÓKESITE</span>
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/pokedex.html">POKÉDEX</a></li>
+                    <li><a href="/filmes.html">FILMES</a></li>
+                    <li><a href="index2.css">JOGOS</a></li>
+                    <li><a href="index.html">HACK ROM</a></li>
+                    <li><a href="/curiosidades.html" class="active">CURIOSIDADES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="curiosidades-container">
+        <h2 class="h2">
+            CURIOSIDADES POKÉMON</h2>
+
+        <div class="curiosidades-list">
+            <div class="curiosidade" onclick="mostrarDetalhe(0)">
+                Pikachu era originalmente mais gordinho!
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(1)">
+                Ditto pode ser clone fracassado do Mew!
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(2)">
+                Cubone usa o crânio da mãe como capacete!
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(3)">
+                Pokémon significa "Pocket Monsters" (Monstros de Bolso).
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(4)">
+                O primeiro Pokémon criado foi Rhydon, não Bulbasaur.
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(5)">
+                Existem mais de 1000 Pokémon atualmente!
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(6)">
+                Pokémon é a franquia de mídia mais lucrativa do mundo.
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(7)">
+                Arcanine era para ser um Pokémon Lendário.
+            </div>
+            <div class="curiosidade" onclick="mostrarDetalhe(8)">
+                A música de Lavender Town gerou lendas assustadoras.
+            </div>
+        </div>
+
+        <div id="curiosidade-detalhe" class="curiosidade-detalhe"></div>
+    </main>
+
+    <footer>
+        <p>Feito por [andrealvess1806@gmail.com]</p>
+    </footer>
+
+    <script src="curiosidades.js"></script>
+</body>
+
+</html>

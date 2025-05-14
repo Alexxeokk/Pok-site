@@ -1,0 +1,320 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(150, 0, 150);
+    color: #333;
+    margin: 0;
+    height: 100vh;
+   
+}
+
+
+
+/* Header */
+header {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    padding: 20px 40px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Fundo do header com uma animação suave de movimento */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png') no-repeat center center / cover;
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff4f4;
+    font-family: 'Press Start 2P', cursive;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Logo com efeito de zoom */
+.logo-link:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de aumento do logo */
+.logo:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Cor dinâmica no texto da logo */
+.logo-link:hover .logo-text {
+    color: #FFD700;
+    /* Cor dourada */
+}
+
+/* Navbar - animação ao passar o mouse */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de zoom nos itens da navbar */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+    transform: scale(1.1);
+    /* Efeito de aumento */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito de clique (ativo) */
+.navbar a:active {
+    color: #ff6f61;
+}
+
+/* Navbar - Animação de zoom e rotação */
+.navbar a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    transform: scale(1.1) rotate(10deg);
+    /* Efeito de zoom e rotação */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Botão de Entrar */
+.btn-entrar {
+    display: inline-block;
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #cc0000;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Pokedex */
+.pokedex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 70px;
+}
+
+.pokemon-card {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(40, 39, 39);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+h2{
+    color: white;
+}
+
+
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-card img {
+    width: 200px;
+    height: 200px;
+}
+
+.pokemon-types {
+    margin-top: 10px;
+}
+
+.type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 0.9rem;
+}
+
+/* Tipos de Pokémon */
+.type.normal {
+    background-color: #A8A878;
+    color: white;
+}
+
+.type.fighting {
+    background-color: #C03028;
+    color: white;
+}
+
+.type.flying {
+    background-color: #A890F0;
+    color: white;
+}
+
+.type.poison {
+    background-color: #A040A0;
+    color: white;
+}
+
+.type.ground {
+    background-color: #E0C068;
+    color: white;
+}
+
+.type.rock {
+    background-color: #B8A038;
+    color: white;
+}
+
+.type.bug {
+    background-color: #A8B820;
+    color: white;
+}
+
+.type.ghost {
+    background-color: #705898;
+    color: white;
+}
+
+.type.fire {
+    background-color: #F08030;
+    color: white;
+}
+
+.type.water {
+    background-color: #6890F0;
+    color: white;
+}
+
+.type.grass {
+    background-color: #78C850;
+    color: white;
+}
+
+.type.electric {
+    background-color: #F8D030;
+    color: white;
+}
+
+.type.steel {
+    background-color: #B8B8D0;
+    color: white;
+}
+
+.type.psychic {
+    background-color: #F85888;
+    color: white;
+}
+
+.type.ice {
+    background-color: #98D8D8;
+    color: white;
+}
+
+.type.fairy {
+    background-color: #EE99AC;
+    color: white;
+}
+
+/* Footer */
+footer {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil */
+}
+
+
+
+

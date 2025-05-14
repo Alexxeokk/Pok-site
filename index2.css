@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Adicionado */
+    justify-content: flex-start; /* Alinha no topo */
+    align-items: center;     /* Alinha à esquerda */
+    overflow: hidden;
+    gap: 0%;
+    background-color: rgba(171, 102, 255, 1);
+    padding: 40px 20px; /* Adiciona espaçamento interno */
+  }
+  
+  /* Header */
+  header {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    padding: 20px 40px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  /* Fundo animado */
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png') no-repeat center center / cover;
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 10s linear infinite;
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      background-position: 0 0;
+    }
+  
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+  }
+  
+  /* LOGO */
+  .logo-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: logoBounce 1s ease;
+    /* ADIÇÃO */
+  }
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff4f4;
+    font-family: 'Press Start 2P', cursive;
+    gap: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: rotate(10deg) scale(1.2);
+  }
+  
+  /* TEXTO DA LOGO */
+  .logo-text {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: logoFadeIn 1s ease-out;
+    /* ADIÇÃO */
+  }
+  
+  .logo-link:hover .logo-text {
+    color: #FFD700;
+    transform: scale(1.1);
+  }
+  
+  /* NAVBAR */
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  }
+  
+  /* Hover com rotação e zoom */
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .navbar a:active {
+    color: #ff6f61;
+  }
+  
+  /* RESPONSIVO HEADER */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .navbar a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(1px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-start;
+  }
+  
+  .swiper-slide-active {
+    filter: blur(0px);
+  }
+  
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+  
+  .swiper-slide span {
+    text-transform: uppercase;
+    color: #fff;
+    background: #1b7402;
+    padding: 7px 18px 7px 25px;
+    display: inline-block;
+    border-radius: 0 20px 20px 0px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  
+  /* 1-- DIVISÃO DE SWIPER /GAME BOY --*/
+  
+  
+  
+  .swiper-slide--1 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #ff0000;
+
+  }
+
+
+   .swiper-slide--2 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #012087;
+  } 
+
+
+   .swiper-slide--3 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #e0e000;
+  }
+  
+  
+  /* 2-- DIVISÃO DE SWIPER /GAME BOY ADVANCE --*/
+  
+  
+  
+  .swiper-slide--4 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #950d01;
+  }
+  
+  .swiper-slide--5 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #00a1ad;
+  }
+  
+  .swiper-slide--6 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #33c000;
+  }
+  
+  .swiper-slide--7 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #fe0000;
+  }
+
+  .swiper-slide--8 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #25f600;
+  }
+
+
+  /* 3-- DIVISÃO DE SWIPER /NINTENDO DS --*/
+
+  .swiper-slide--9 span {
+    font-family: 'Press Start 2P', cursive;
+    background: rgb(9, 0, 57)
+  }
+  
+  .swiper-slide--10 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #767575;
+  }
+  
+  .swiper-slide--11 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #d6b301;
+  }
+  
+  .swiper-slide--12 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #2a2a2a;
+  }
+
+  .swiper-slide--13 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #c4c3c3;
+  }
+
+
+  /* 4-- DIVISÃO DE SWIPER /NINTENDO 3DS --*/
+
+  .swiper-slide--14 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #060121;
+  }
+  
+  .swiper-slide--15 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #095f01;
+  }
+  
+  .swiper-slide--16 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #b45205;
+  }
+  
+  .swiper-slide--17 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #07ffff;
+  }
+
+  .swiper-slide--18 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #fb840e;
+  }
+
+
+  .swiper-slide--19 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #130248;
+  }
+  
+  .swiper-slide--20 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #d14900;
+  }
+
+  .swiper-slide--21 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #080122;
+  }
+
+  /* 5-- DIVISÃO DE SWIPER /NINTENDO SWITCH --*/
+
+  .swiper-slide--22 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #ffff02;
+  }
+  
+  .swiper-slide--23 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #a94b00;
+  }
+  
+  .swiper-slide--24 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #03a497;
+  }
+  
+  .swiper-slide--25 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #c10027;
+  }
+
+  .swiper-slide--26 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #07ff72;
+  }
+
+
+  .swiper-slide--27 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #a60000;
+  }
+  
+  .swiper-slide--28 span {
+    font-family: 'Press Start 2P', cursive;
+    background: #970260;
+  }
+
+  
+  
+  
+  
+  
+  .swiper-slide h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    padding: 25px 45px 0 25px;
+    text-transform: uppercase;
+  }
+  
+  .swiper-slide p {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: 0 25px 35px 25px;
+  }
+  
+  .swiper-slide svg {
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    margin-right: 7px;
+  }
+  
+  
+  
+  /*1 - DIVISÃO DE SWIPER*/
+  
+  
+  .swiper-slide--1 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokered.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--2 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeblue.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--3 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeyellow.png) no-repeat 50% 50% / cover;
+  }
+  
+  
+  
+  /*2 - DIVISÃO DE SWIPER*/
+  
+  .swiper-slide--4 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeruby.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--5 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokesaphi.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--6 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeemerald.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--7 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokefire.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--8 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeleaf.png) no-repeat 50% 50% / cover;
+  }
+
+
+  /*3 - DIVISÃO DE SWIPER*/
+
+  .swiper-slide--9 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokediamond.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--10 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokepearl.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--11 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeplatinum.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--12 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeblack.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--13 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokewhite.png) no-repeat 50% 50% / cover;
+  }
+
+
+
+  /*4 - DIVISÃO DE SWIPER*/
+
+
+
+  .swiper-slide--14 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokex.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--15 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokey.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--16 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeomega.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--17 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokealphasa.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--18 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokesun.png) no-repeat 50% 50% / cover;
+  }
+
+
+  .swiper-slide--19 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokemoon.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--20 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeultrasu.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--21 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeultramo.png) no-repeat 50% 50% / cover;
+  }
+
+
+   /*5 - DIVISÃO DE SWIPER*/
+
+   
+  .swiper-slide--22 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokepikachu.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--23 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokeeevee.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--24 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(/jogosImagens/pokesword.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--25 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(jogosImagens/pokeshield.png) no-repeat 50% 50% / cover;
+  }
+
+
+  .swiper-slide--26 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(jogosImagens/pokelegends.png) no-repeat 50% 50% / cover;
+  }
+  
+  .swiper-slide--27 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(jogosImagens/pokescarlet.png) no-repeat 50% 50% / cover;
+  }
+
+  .swiper-slide--28 {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url(jogosImagens/pokeviolet.png) no-repeat 50% 50% / cover;
+  }
+
+
+
+
+
+  
+  
+  
+  
+  .swiper-3d .swiper-slide-shadow-left,
+  .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+  }
+  
+  /* Footer */
+  footer {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil */
+  }
+
+
+  h3 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Press Start 2P", cursive;
+    color: #333;
+    padding: 30px 20px 10px;
+    margin: 0%;
+    text-transform: uppercase;
+    transition: transform 0.6s ease;
+  }
+
+  
+  h3::before {
+    content: '';
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png');
+    background-size: contain;
+    width: 80px;
+    height: 110px;
+    display: inline-block;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-left: 10px;
+    transition: transform 0.15s ease; /* Acelera a animação */
+  }
+
+  
+  
+  h3:hover {
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+
+  
+  /* Zoom + rotação ao passar o mouse */
+  h3:hover::before {
+    transform: scale(1.2) rotate(15deg);
+  }
+
+
+  
+
+  

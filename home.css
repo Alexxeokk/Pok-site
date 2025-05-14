@@ -1,0 +1,278 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fed13b;
+    color: #333;
+    margin: 0;
+    margin: 0;
+    height: 100vh;
+   
+}
+
+
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+.welcome-text h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.7rem;
+    color: #FF0000;
+    margin-bottom: 15px;
+}
+
+.welcome-text p {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.welcome-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.welcome-image img {
+    width: 80%;
+    border-radius: 10px;
+   
+    transition: transform 0.3s ease;
+}
+
+.welcome-image img:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE DA SEÇÃO */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .welcome-text p {
+        font-size: 0.8rem;
+    }
+
+    .welcome-image img {
+        width: 70%;
+    }
+}
+
+/* Header */
+header {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    padding: 20px 40px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Fundo animado */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+/* LOGO */
+.logo-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: logoBounce 1s ease;
+    /* ADIÇÃO */
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff4f4;
+    font-family: 'Press Start 2P', cursive;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* TEXTO DA LOGO */
+.logo-text {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: logoFadeIn 1s ease-out;
+    /* ADIÇÃO */
+}
+
+.logo-link:hover .logo-text {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* NAVBAR */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Hover com rotação e zoom */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.navbar a:active {
+    color: #ff6f61;
+}
+
+/* RESPONSIVO HEADER */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* FOOTER */
+footer {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, #1C1C1C, #363636);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInFooter 1s ease-in-out;
+    /* ADIÇÃO */
+}
+
+
+
+
+
+
+/* ANIMAÇÕES */
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoBounce {
+    0% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05) translateY(5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
