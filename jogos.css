@@ -399,17 +399,17 @@
   
   .swiper-slide--1 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokered.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokered.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--2 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeblue.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeblue.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--3 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeyellow.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeyellow.png) no-repeat 50% 50% / cover;
   }
   
   
@@ -418,27 +418,27 @@
   
   .swiper-slide--4 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeruby.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeruby.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--5 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokesaphi.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokesaphi.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--6 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeemerald.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeemerald.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--7 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokefire.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokefire.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--8 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeleaf.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeleaf.png) no-repeat 50% 50% / cover;
   }
 
 
@@ -446,27 +446,27 @@
 
   .swiper-slide--9 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokediamond.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokediamond.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--10 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokepearl.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokepearl.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--11 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeplatinum.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeplatinum.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--12 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeblack.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeblack.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--13 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokewhite.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokewhite.png) no-repeat 50% 50% / cover;
   }
 
 
@@ -477,43 +477,43 @@
 
   .swiper-slide--14 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokex.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokex.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--15 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokey.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokey.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--16 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeomega.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeomega.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--17 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokealphasa.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokealphasa.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--18 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokesun.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokesun.png) no-repeat 50% 50% / cover;
   }
 
 
   .swiper-slide--19 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokemoon.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokemoon.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--20 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeultrasu.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeultrasu.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--21 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeultramo.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeultramo.png) no-repeat 50% 50% / cover;
   }
 
 
@@ -522,38 +522,38 @@
    
   .swiper-slide--22 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokepikachu.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokepikachu.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--23 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokeeevee.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeeevee.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--24 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(/jogosImagens/pokesword.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokesword.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--25 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(jogosImagens/pokeshield.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeshield.png) no-repeat 50% 50% / cover;
   }
 
 
   .swiper-slide--26 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(jogosImagens/pokelegends.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokelegends.png) no-repeat 50% 50% / cover;
   }
   
   .swiper-slide--27 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(jogosImagens/pokescarlet.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokescarlet.png) no-repeat 50% 50% / cover;
   }
 
   .swiper-slide--28 {
     background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-      url(jogosImagens/pokeviolet.png) no-repeat 50% 50% / cover;
+      url(/src/jogosImagens/pokeviolet.png) no-repeat 50% 50% / cover;
   }
 
 
